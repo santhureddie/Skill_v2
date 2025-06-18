@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Job Skill Highlighter",
+  "version": "1.0",
+  "description": "Automatically highlights technical skills mentioned in job descriptions.",
+  "permissions": ["activeTab", "scripting"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["skills.js", "content.js"],
+      "css": ["style.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
